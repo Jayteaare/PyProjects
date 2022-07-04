@@ -3,9 +3,9 @@
 import sys
 import socket
 import os
+mkdir = os.mkdir
 from termcolor import cprint
 from pyfiglet import figlet_format
-from os import mkdir 
 from datetime import datetime
 from time import sleep   # for timestamp
 
@@ -18,7 +18,7 @@ else:
     sys.exit() 
 
 # Begin the scan
-cprint (figlet_format("BbyPyScan", font="starwars"), color="red", attrs=["bold"])
+cprint (figlet_format("SimpleScan", font="starwars"), color="red", attrs=["bold"])
 print ("We're getting everything ready.") 
 if not os.path.exists(target): # If the target directory doesn't exist, create it
     mkdir (target) # Create a directory for the scan
