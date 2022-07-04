@@ -3,7 +3,6 @@
 import sys
 import socket
 import os
-mkdir = os.mkdir
 from termcolor import cprint
 from pyfiglet import figlet_format
 from datetime import datetime
@@ -21,7 +20,7 @@ else:
 cprint (figlet_format("SimpleScan", font="starwars"), color="red", attrs=["bold"])
 print ("We're getting everything ready.") 
 if not os.path.exists(target): # If the target directory doesn't exist, create it
-    mkdir (target) # Create a directory for the scan
+    os.mkdir (target) # Create a directory for the scan
     open (target + "/" + target + "_scanresults" + ".txt", "w") # Create a file for the scan results
 sleep (5) # Wait 5 seconds
 print ("Time initalized: " + str(datetime.now())) # Print the time
